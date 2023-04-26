@@ -122,7 +122,15 @@ export DEFAULT_USER="hweissi"
 # prompt_context(){}
 export TERMINAL=/usr/bin/alacritty
 # source /opt/Xilinx/Vivado/2019.1/settings64.sh
-
+function angrshell() {
+    if [ $# -gt 1 ]
+    then
+        echo "Usage: angrshell <path>"
+        return
+    fi
+    readonly vpath=${1:-"."}
+    docker run --rm -it -v "$vpath:/pwd" angr/angr
+}
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
