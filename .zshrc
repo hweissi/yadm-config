@@ -134,3 +134,6 @@ function angrshell() {
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
+
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh
