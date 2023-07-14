@@ -88,6 +88,7 @@ window#waybar.solo {
 #custom-notification,
 #sway-scratchpad,
 #keyboard-state,
+#custom-media,
 #mpd {
     padding: 0 10px;
     margin: 6px 3px;
@@ -153,7 +154,7 @@ label:focus {
 }
 
 #memory {
-    background-color: #e557af;
+    background-color: #ff4cba;
     color: #282a36;
 }
 
@@ -182,7 +183,8 @@ label:focus {
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
+    background-color: #30d136;
+    color: #282a36;
 }
 
 #custom-media.custom-vlc {
