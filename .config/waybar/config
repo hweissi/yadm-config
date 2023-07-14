@@ -1,21 +1,22 @@
 {
-    "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
+    "layer": "top",
+    "height": 30,
+    "spacing": 4,
     "modules-left": ["wlr/workspaces", "hyprland/submap", "hyprland/scratchpad", "custom/media"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "network", "cpu", "memory", "temperature", "keyboard-state", "hyprland/language", "battery", "battery#bat2", "clock", "tray"],
-    // Modules configuration
+    "modules-right": ["idle_inhibitor", "backlight", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "battery#bat2", "clock", "tray"],
+
     "fixed-center": false,
     "hyprland/window": {
-        "separate-outputs": true
+        "separate-outputs": true,
+        "rewrite": {
+            "(.*) - Google Chrome": "$1 -  ",
+            "(.*) - fish": "> [$1]"
+        },
     },
     "hyprland/submap": {
-        "format": "✌️ {}",
-        "max-length": 8,
+        "format": "{}",
+        "max-length": 10,
         "tooltip": false
     },
     "wlr/workspaces": {
@@ -31,7 +32,7 @@
             "7": "7",
             "8": "8",
             "9": "9",
-            "0": "0",
+            "10": "10",
             "urgent": "",
             "focused": "",
             "default": "???"
@@ -93,20 +94,22 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
+        "reverse-scrolling": true,
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "interval": 5,
+        "format": "{capacity}% -{power:.3}W {icon} ",
+        "format-charging": "{capacity}% +{power:.3}W ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        "format-full": " ",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {

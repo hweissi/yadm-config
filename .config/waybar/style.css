@@ -8,10 +8,10 @@
 }
 
 window#waybar {
-    background: @theme_base_color;
+    /*background: @theme_base_color;*/
     background-color: rgba(43, 48, 59, 0.5);
     /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
-    color: @theme_text_color;
+    color: #f8f8f2;
     transition-property: background-color;
     transition-duration: .5s;
     border-radius: 0;
@@ -22,12 +22,12 @@ window#waybar.hidden {
 }
 
 tooltip {
-  background: rgba(43, 48, 59, 0.5);
+  background: rgba(43, 48, 59, 0.8);
   border: 1px solid rgba(100, 114, 125, 0.5);
 }
 
 tooltip label {
-  color: @theme_text_color;
+  color: #f8f8f2;
 }
 
 /*
@@ -64,10 +64,13 @@ window#waybar.solo {
     background-color: #eb4d4b;
 }
 
-#mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+#submap {
+    background-color: #eb4d4b;
+    padding: 0 10px;
+    margin: 6px 3px;
 }
+
+
 
 #clock,
 #battery,
@@ -108,12 +111,13 @@ window#waybar.solo {
 }
 
 #clock {
-    background-color: #ff5555;
-    color: #282a36;
+    background-color: #32249a;
+    color: #f8f8f2;
+    font-weight: bolder;
 }
 
 #battery {
-    background-color: #44475a;
+    background-color: #6035b0;
     color: #f8f8f2;
 }
 
@@ -144,12 +148,12 @@ label:focus {
 }
 
 #cpu {
-    background-color: #f1fa8c;
+    background-color: #12d7f1;
     color: #282a36;
 }
 
 #memory {
-    background-color: #f1fa8c;
+    background-color: #e557af;
     color: #282a36;
 }
 
@@ -158,17 +162,17 @@ label:focus {
 }
 
 #network {
-    background-color: #50fa7b;
+    background-color: #ffe227;
     color: #282a36;
 }
 
 #network.disconnected {
-    background-color: #50fa7b;
+    background-color: #ffe227;
     color: #282a36;
 }
 
 #pulseaudio {
-    background-color: #bd93f9;
+    background-color: #40f576;
     color: #282a36;
 }
 
@@ -186,22 +190,33 @@ label:focus {
 }
 
 #temperature {
-    background-color: #ff79c6;
+    background-color: #ef4b66;
     color: #282a36;
 }
 
 #temperature.critical {
-    background-color: #ff5555;
+    background-color: #ff2929;
     color: #282a36;
 }
 
 #tray {
-    background-color: #bd93f9
+    background-color: #b5aacd
 }
 
 #tray > .passive {
     -gtk-icon-effect: dim;
 }
+
+#tray menu {
+    background: rgba(43, 48, 59, 0.8);
+    border: 1px solid rgba(100, 114, 125, 0.5);
+    color: #f8f8f2;
+}
+
+#tray menu menuitem:hover {
+    background: rgba(69, 93, 143, 0.8);
+}
+
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
@@ -244,7 +259,7 @@ label:focus {
 }
 
 #keyboard-state {
-    background-color: #97e1ad;
+    background-color: #40f576;
     color: #000000;
     padding: 0 0px;
     min-width: 16px;
