@@ -39,7 +39,7 @@ ${goto 40}$color2${top_mem name 5}$alignr$color${top_mem mem_res 5}
 #
 ${voffset 10}${goto 40}${color2}${font Bitstream Vera Sans:size=12}root ${color}${goto 100}${fs_bar 5 /}
 #
-${goto 40}${color2}${font Bitstream Vera Sans:size=12}home ${color}${goto 100}${fs_bar 5 /home}
+${goto 40}${color2}${font Bitstream Vera Sans:size=12}home ${color}${goto 100}${fs_bar 5 /opt}
 #
 ${if_existing /sys/class/net/wlan0/operstate up}
 ${goto 40}${font Bitstream Vera Sans:size=12}${color2}D:$color ${downspeed wlan0}      ${goto 135}${color2}U:$color ${upspeed wlan0}
