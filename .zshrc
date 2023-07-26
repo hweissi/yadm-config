@@ -115,10 +115,12 @@ setopt appendhistory
 alias ls="lsd --group-directories-first"
 alias ssh='TERM=xterm-256color ssh'
 alias pc='echo -n $(pwd) | xclip'
+alias icat='kitty +kitten icat'
 unsetopt share_history
 # powerline-daemon -q
 # . /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 export DEFAULT_USER="hweissi"
+export EDITOR="nvim"
 # prompt_context(){}
 export TERMINAL=/usr/bin/alacritty
 # source /opt/Xilinx/Vivado/2019.1/settings64.sh
@@ -137,3 +139,4 @@ function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;
 
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
+

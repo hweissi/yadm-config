@@ -13,6 +13,7 @@
         "icon": false,
         "rewrite": {
             "(.*) - Google Chrome": "$1 -  ",
+            "Spotify": "",
         },
     },
     "hyprland/submap": {
