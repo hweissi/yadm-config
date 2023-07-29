@@ -96,6 +96,7 @@
     todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
     timewarrior             # timewarrior tracking status (https://timewarrior.net/)
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
+    per_directory_history   # Oh My Zsh per-directory-history local/global indicator
     # time                  # current time
     # ip                    # ip address and bandwidth usage for a specified network interface
     # public_ip             # public IP address
@@ -109,7 +110,7 @@
   typeset -g POWERLEVEL9K_MODE=nerdfont-complete
   # When set to `moderate`, some icons will have an extra space after them. This is meant to avoid
   # icon overlap when using non-monospace fonts. When set to `none`, spaces are not added.
-  typeset -g POWERLEVEL9K_ICON_PADDING=moderate
+  typeset -g POWERLEVEL9K_ICON_PADDING=none
 
   # When set to true, icons appear before content on both sides of the prompt. When set
   # to false, icons go after content. If empty or not set, icons go before content in the left
@@ -258,13 +259,13 @@
   # respectively.
   typeset -g POWERLEVEL9K_DIR_TRUNCATE_BEFORE_MARKER="first"
   # Don't shorten this many last directory segments. They are anchors.
-  typeset -g POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+  typeset -g POWERLEVEL9K_SHORTEN_DIR_LENGTH=0
   # Shorten directory if it's longer than this even if there is space for it. The value can
   # be either absolute (e.g., '80') or a percentage of terminal width (e.g, '50%'). If empty,
   # directory will be shortened only when prompt doesn't fit or when other parameters demand it
   # (see POWERLEVEL9K_DIR_MIN_COMMAND_COLUMNS and POWERLEVEL9K_DIR_MIN_COMMAND_COLUMNS_PCT below).
   # If set to `0`, directory will always be shortened to its minimum length.
-  typeset -g POWERLEVEL9K_DIR_MAX_LENGTH=80
+  typeset -g POWERLEVEL9K_DIR_MAX_LENGTH="40%"
   # When `dir` segment is on the last prompt line, try to shorten it enough to leave at least this
   # many columns for typing commands.
   typeset -g POWERLEVEL9K_DIR_MIN_COMMAND_COLUMNS=40
@@ -341,7 +342,7 @@
 
   #####################################[ vcs: git status ]######################################
   # Branch icon. Set this parameter to '\uF126 ' for the popular Powerline branch icon.
-  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='\uF126 '
+  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='\UE0A0 '
 
   # Untracked files icon. It's really a question mark, your font isn't broken.
   # Change the value of this parameter to show a different icon.
@@ -481,7 +482,7 @@
   typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_COLOR=76
   typeset -g POWERLEVEL9K_VCS_LOADING_VISUAL_IDENTIFIER_COLOR=244
   # Custom icon.
-  # typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_EXPANSION=''
   # Custom prefix.
   # typeset -g POWERLEVEL9K_VCS_PREFIX='%244Fon '
 
