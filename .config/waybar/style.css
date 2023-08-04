@@ -1,10 +1,9 @@
 * { 
-    all: unset;
     border: none;
     border-radius: 4;
     font-family: JetBrains Mono;
     font-size: 14px;
-    min-height: 0;
+    /*min-height: 0;*/
 }
 
 window#waybar {
@@ -21,14 +20,14 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-tooltip {
-  background: rgba(43, 48, 59, 0.8);
+/*tooltip {
+  background: rgba(59, 43, 45, 0.8);
   border: 1px solid rgba(100, 114, 125, 0.5);
 }
 
 tooltip label {
   color: #f8f8f2;
-}
+}*/
 
 /*
 window#waybar.empty {
@@ -210,13 +209,8 @@ label:focus {
 }
 
 #tray menu {
-    background: rgba(43, 48, 59, 0.8);
-    border: 1px solid rgba(100, 114, 125, 0.5);
-    color: #f8f8f2;
-}
-
-#tray menu menuitem:hover {
-    background: rgba(69, 93, 143, 0.8);
+    border-radius: 8
+    
 }
 
 
