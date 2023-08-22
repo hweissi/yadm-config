@@ -78,7 +78,7 @@ plugins=(
   zsh-autosuggestions
   bgnotify
   archlinux
-)
+ z)
 
 source $ZSH/oh-my-zsh.sh
 

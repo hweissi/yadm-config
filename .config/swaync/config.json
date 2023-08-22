@@ -1,0 +1,161 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "control-center-margin-top": 20,
+  "control-center-margin-bottom": 20,
+  "control-center-margin-right": 20,
+  "control-center-margin-left": 0,
+  "notification-icon-size": 48,
+  "notification-body-image-height": 160,
+  "notification-body-image-width": 90,
+  "timeout": 6,
+  "timeout-low": 4,
+  "timeout-critical": 0,
+  "fit-to-screen": true,
+  "control-center-width": 380,
+  "notification-window-width": 366,
+  "keyboard-shortcuts": false,
+  "image-visibility": "when-available",
+  "transition-time": 100,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+  "notification-visibility": {
+    "example-name": {
+      "state": "muted",
+      "urgency": "Low",
+      "app-name": "Spotify"
+    }
+  },
+  "widgets": [
+    "menubar",
+    "buttons-grid",
+    "volume",
+    "backlight",
+    "mpris",
+    "title",
+    "dnd",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "mpris": {
+      "image-size": 96,
+      "image-radius": 6
+    },
+    "backlight": {
+      "label": "",
+      "device": "intel_backlight",
+      "min": 10
+    },
+    "volume": {
+      "label": ""
+    },
+    "menubar": {
+
+      "menu#powermode-buttons": {
+        "label": "", 
+        "position": "left",
+        "actions": [ 
+          {
+            "label": "Performance",
+            "command": "powerprofilesctl set performance"
+          },
+          {
+            "label": "Balanced",
+            "command": "powerprofilesctl set balanced"
+          },
+          {
+            "label": "Power-saver",
+            "command": "powerprofilesctl set power-saver"
+          }
+        ]
+      },
+      "menu#screenshot-buttons": {
+        "label": "",
+        "position": "left",
+        "actions": [
+          {
+            "label": "   Entire screen",
+            "command": "swaync-client -cp && sleep 1 && hyprshot -m output"
+          },
+          {
+            "label": "   Select a region",
+            "command": "swaync-client -cp && sleep 1 && hyprshot -m region"
+          },
+          {
+            "label": "   Open screenshot folder",
+            "command": "exo-open $HYPRSHOT_DIR"
+          }
+        ]
+      },
+      "menu#power-buttons": {
+        "label": "", 
+        "position": "left",
+        "actions": [ 
+          {
+            "label": "   Reboot",
+            "command": "systemctl reboot"
+          },
+          {
+            "label": "   Lock",
+            "command": "loginctl lock-session"
+          },
+          {
+            "label": "   Logout",
+            "command": "hyprctl dispatch exit"
+          },
+          {
+            "label": "   Shut down",
+            "command": "systemctl poweroff"
+          }
+        ]
+      }
+     
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "",
+          "command": "nm-connection-editor"
+        },
+        {
+          "label": "",
+          "command": "blueman-manager"
+        },
+        {
+          "label": "",
+          "command": "nwg-look"
+        },
+        {
+          "label": "",
+          "command": "code ~/.config"
+        },
+        {
+          "label": "",
+          "command": "spotify"
+        },
+        {
+          "label": "",
+          "command": "thunar"
+        },
+        {
+          "label": "\udb81\ude6f",
+          "command": "discord"
+        },
+        {
+          "label": "",
+          "command": "google-chrome-stable"
+        }
+      ]
+    }
+  }
+}
