@@ -122,7 +122,7 @@ unsetopt share_history
 export DEFAULT_USER="hweissi"
 export EDITOR="nvim"
 # prompt_context(){}
-export TERMINAL=/usr/bin/alacritty
+export TERMINAL=/usr/bin/kitty
 # source /opt/Xilinx/Vivado/2019.1/settings64.sh
 function angrshell() {
     if [ $# -gt 1 ]

@@ -1,0 +1,2 @@
+before-sleep 'loginctl lock-session'
+lock '~/.config/hypr/scripts/lock.sh'
