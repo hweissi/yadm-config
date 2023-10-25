@@ -78,7 +78,11 @@ plugins=(
   zsh-autosuggestions
   bgnotify
   archlinux
- z)
+  z
+  cp
+  transfer
+
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,16 +117,18 @@ setopt appendhistory
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="lsd --group-directories-first"
-alias ssh='TERM=xterm-256color ssh'
-alias pc='echo -n $(pwd) | xclip'
+#alias ssh='TERM=xterm-256color ssh'
+alias pc='echo -n $(pwd) | wl-copy --primary'
 alias icat='kitty +kitten icat'
 unsetopt share_history
+
 # powerline-daemon -q
 # . /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 export DEFAULT_USER="hweissi"
 export EDITOR="nvim"
 # prompt_context(){}
 export TERMINAL=/usr/bin/kitty
+export DOCKER_BUILDKIT=0
 # source /opt/Xilinx/Vivado/2019.1/settings64.sh
 function angrshell() {
     if [ $# -gt 1 ]
