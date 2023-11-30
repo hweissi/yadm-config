@@ -68,6 +68,7 @@ disabled = true # Disabled by default
 [directory]
 style = "bg:purple"
 repo_root_style = "fg:white bg:purple"
+read_only_style = "fg:white bg:purple"
 format = "[  $path ]($style)"
 repo_root_format = "[  ]($style)[$repo_root]($repo_root_style)[$path ]($style)[$read_only]($read_only_style)"
 truncation_length = 2
@@ -173,16 +174,16 @@ style = "bold yellow"
 style = "fg:white bg:bg_gray bold"
 min_time = 2000
 min_time_to_notify = 45000
-format = "[ ](bg:bg_gray)[$duration ]($style)"
+format = "[  ](bg:bg_gray)[$duration]($style)"
 
 [status]
 style = 'bg:bg_gray'
 symbol = '❌ '
 success_symbol = ''
-format = '[$symbol$signal_name$maybe_int ]($style)'
+format = '[ $symbol$signal_name$maybe_int]($style)'
 map_symbol = true
 disabled = false
 
 [python]
 style = "bg:bg_gray fg:blue"
-format = '[$virtualenv ]($style)'
+format = '([ $virtualenv ]($style))'
